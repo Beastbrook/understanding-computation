@@ -14,9 +14,7 @@ class Tape private(
 
   def write(character: Character): Tape = this.copy(middle = character)
 
-  private def toLeft: Tape =
-    if(left.isEmpty) this
-    else Tape(left.init, left.last, middle +: right, this.blank)
+  private def toLeft: Tape = Tape(left.init, left.last, middle +: right, this.blank)
 
   private def toRight: Tape = Tape(left :+ middle, right.head, right.tail, this.blank)
 
