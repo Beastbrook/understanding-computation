@@ -1,6 +1,6 @@
 package abstractMachine.automata.finite.nondeterministic
 
-import abstractMachine.automata.{Character, EmptyChar, NonEmptyChar, State}
+import abstractMachine.{Character, EmptyChar, NonEmptyChar, State}
 
 import scala.annotation.tailrec
 

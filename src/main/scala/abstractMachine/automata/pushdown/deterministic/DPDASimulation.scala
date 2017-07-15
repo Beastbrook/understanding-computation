@@ -1,7 +1,7 @@
 package abstractMachine.automata.pushdown.deterministic
 
 import abstractMachine.automata.pushdown.{PDATransitionFunction => TransFunc}
-import abstractMachine.automata.{EmptyChar, State, NonEmptyChar => NEChar}
+import abstractMachine.{EmptyChar, State, NonEmptyChar => NEChar}
 
 /**
   * Created by k_higuchi on 2017/07/09.

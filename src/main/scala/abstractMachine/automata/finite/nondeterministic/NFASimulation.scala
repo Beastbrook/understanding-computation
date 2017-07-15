@@ -1,6 +1,6 @@
 package abstractMachine.automata.finite.nondeterministic
 
-import abstractMachine.automata.{EmptyChar, NonEmptyChar, State}
+import abstractMachine.{EmptyChar, NonEmptyChar, State}
 import abstractMachine.automata.finite.FiniteAutomataRule
 
 /**

@@ -1,6 +1,6 @@
 package abstractMachine.automata.finite.deterministic
 
-import abstractMachine.automata.{State, Character}
+import abstractMachine.{State, Character}
 import abstractMachine.automata.finite.FiniteAutomataRule
 
 /**

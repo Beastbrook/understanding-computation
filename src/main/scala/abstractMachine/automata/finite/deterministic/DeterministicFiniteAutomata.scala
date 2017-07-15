@@ -1,6 +1,6 @@
 package abstractMachine.automata.finite.deterministic
 
-import abstractMachine.automata.{Character, NonEmptyChar, State}
+import abstractMachine.{Character, NonEmptyChar, State}
 
 /**
   * Created by k_higuchi on 2017/07/08.

@@ -1,6 +1,6 @@
 package abstractMachine.automata.pushdown.nondeterministic
 
-import abstractMachine.automata.{EmptyChar, State, NonEmptyChar => NEChar}
+import abstractMachine.{EmptyChar, State, NonEmptyChar => NEChar}
 import abstractMachine.automata.pushdown.{PDATransitionFunction => TransFunc}
 
 /**

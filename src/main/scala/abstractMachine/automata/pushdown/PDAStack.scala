@@ -1,6 +1,6 @@
 package abstractMachine.automata.pushdown
 
-import abstractMachine.automata.Character
+import abstractMachine.Character
 
 /**
   * Created by k_higuchi on 2017/07/09.

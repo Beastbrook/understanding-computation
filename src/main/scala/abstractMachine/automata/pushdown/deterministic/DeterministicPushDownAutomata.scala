@@ -1,6 +1,6 @@
 package abstractMachine.automata.pushdown.deterministic
 
-import abstractMachine.automata.{Character, EmptyChar, NonEmptyChar, State}
+import abstractMachine.{Character, EmptyChar, NonEmptyChar, State}
 import abstractMachine.automata.pushdown.{PDAInput, PDAStack}
 
 import scala.annotation.tailrec

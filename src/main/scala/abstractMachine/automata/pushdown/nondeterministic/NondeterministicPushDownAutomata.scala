@@ -1,7 +1,7 @@
 package abstractMachine.automata.pushdown.nondeterministic
 
 import abstractMachine.automata.pushdown.{PDAInput, PDAStack}
-import abstractMachine.automata.{Character, EmptyChar, NonEmptyChar, State}
+import abstractMachine.{Character, EmptyChar, NonEmptyChar, State}
 
 import scala.annotation.tailrec
 
@@ -98,9 +98,9 @@ object NondeterministicPushDownAutomata {
   }
 
   private def nextConfigurations(
-    character: Character,
-    transitionFunctions: NPDATransitionFunctions,
-    configuration: NPDAConfiguration
+                                  character: Character,
+                                  transitionFunctions: NPDATransitionFunctions,
+                                  configuration: NPDAConfiguration
   ): Set[NPDAConfiguration] = {
 
     if(configuration.stack.isEmpty) return Set()
@@ -123,9 +123,9 @@ object NondeterministicPushDownAutomata {
   }
 
   private def nextConfigurations(
-    character: Character,
-    transitionFunctions: NPDATransitionFunctions,
-    configurations: Set[NPDAConfiguration]
+                                  character: Character,
+                                  transitionFunctions: NPDATransitionFunctions,
+                                  configurations: Set[NPDAConfiguration]
   ): Set[NPDAConfiguration] =
     configurations
       .flatMap(this.nextConfigurations(character, transitionFunctions, _))

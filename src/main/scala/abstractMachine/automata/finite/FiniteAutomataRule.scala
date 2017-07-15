@@ -1,6 +1,7 @@
 package abstractMachine.automata.finite
 
-import abstractMachine.automata.{State, Character}
+import abstractMachine.Character
+import abstractMachine.State
 
 /**
   * Created by k_higuchi on 2017/07/08.
