@@ -29,7 +29,7 @@ case class DeterministicTuringMachine(
   def run: DeterministicTuringMachine = {
     @tailrec
     def loop(dtm: DeterministicTuringMachine): DeterministicTuringMachine = {
-      if(dtm.isStuck) dtm
+      if(dtm.isAcceptState || dtm.isStuck) dtm
       else loop(dtm.step)
     }
     loop(this)
