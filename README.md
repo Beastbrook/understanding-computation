@@ -5,8 +5,8 @@ Understanding Computation
 https://www.oreilly.co.jp/books/9784873116976/
 ```
 
-やること
-- 勉強のためにRubyで実装されたコードをScalaで書く
+やること  
+- 勉強のためにRubyで実装されたコードをScalaで書く  
 
 方針
 - ミュータブルなクラスはイミュータブルにする
