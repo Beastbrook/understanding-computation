@@ -4,7 +4,7 @@ import lambdacalculus.untyped.ChurchNumerals._
 import lambdacalculus.untyped.ChurchBooleans._
 import lambdacalculus.untyped.Predicates._
 import lambdacalculus.untyped.ChurchPairs._
-import lambdacalculus.untyped.FixedPointOperations._
+import lambdacalculus.untyped.FixedPointOperators._
 
 /**
   * Created by k_higuchi on 2017/07/16.

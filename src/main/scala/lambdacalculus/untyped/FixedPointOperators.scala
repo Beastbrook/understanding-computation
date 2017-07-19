@@ -3,7 +3,7 @@ package lambdacalculus.untyped
 /**
   * Created by k_higuchi on 2017/07/16.
   */
-object FixedPointOperations {
+object FixedPointOperators {
 
   type YCombinator[A, B] = ((A => B) => (A => B)) => (A => B)
 
