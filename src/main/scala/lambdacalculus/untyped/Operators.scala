@@ -25,44 +25,11 @@ object Operators {
   val Multiply: ChurchNumeral => ChurchNumeral => ChurchNumeral = m => n => n(Add(m).asInstanceOf[Any => Any])(Zero).asInstanceOf[ChurchNumeral]
   val Power: ChurchNumeral => ChurchNumeral => ChurchNumeral = m => n => n(Multiply(m).asInstanceOf[Any => Any])(One).asInstanceOf[ChurchNumeral]
 
-
-  val UnsafeFact: Any => Any = Y (
-    (f: (Any => Any)) =>
-      (n: Any) =>
-        If(IsLessOrEqual(n.asInstanceOf[ChurchNumeral])(Zero))(One)(
-          Multiply(n.asInstanceOf[ChurchNumeral])(
-            f(Subtract(n.asInstanceOf[ChurchNumeral])(One)).asInstanceOf[ChurchNumeral]
-          )
-        )
-  )
-
-  val UnsafeMod: Any => Any = Y {
-    (f: (Any => Any)) =>
-      (m: Any) => (n: Any) =>
-        If(IsLessOrEqual(n.asInstanceOf[ChurchNumeral])(m.asInstanceOf[ChurchNumeral]))(
-          f(
-            Subtract(m.asInstanceOf[ChurchNumeral])(n.asInstanceOf[ChurchNumeral])
-          ).asInstanceOf[Any => Any](n)
-        )(m)
-  }
-
-//  val Mod = Z { (f: Any => Any) => (m: Any) => (n: Any) =>
-//    If(IsLessOrEqual(n.asInstanceOf[ChurchNumeral])(m.asInstanceOf[ChurchNumeral])) (
-//      (x: Any) => f.asInstanceOf[Any => Any => Any => Any] (
-//        Subtract(m.asInstanceOf[ChurchNumeral])(n.asInstanceOf[ChurchNumeral])
-//      )(n)(x)
-//    )(m)
-//  }
-
-  val Mod: Any => Any = Z { (f: Any) =>
-    (m: Any) => (n: Any) =>
-      If(IsLessOrEqual(n.asInstanceOf[ChurchNumeral])(m.asInstanceOf[ChurchNumeral])) {
-        (x: Any) => {
-          f.asInstanceOf[Any => Any => Any => Any](Subtract(m.asInstanceOf[ChurchNumeral])(n.asInstanceOf[ChurchNumeral]))(n)(x)
-        }
-      }{
-        m
-      }
+  val Mod = Z { (f: ChurchNumeral => ChurchNumeral => Any) =>
+    (m: ChurchNumeral) => (n: ChurchNumeral) =>
+      If (IsLessOrEqual(n)(m)) {
+        (x: Any) => f(Subtract(m)(n))(n).asInstanceOf[Any => Any](x)
+      }{ m }
   }
 
 }

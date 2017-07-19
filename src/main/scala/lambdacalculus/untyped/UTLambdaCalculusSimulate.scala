@@ -45,6 +45,10 @@ object UTLambdaCalculusSimulate extends App {
   println(toBoolean(IsLessOrEqual(Fifteen)(Fifteen)))
   println(toBoolean(IsLessOrEqual(Fifteen)(Five)))
 
-  println(toInt(Mod.asInstanceOf[Any => Any => Any](Fifteen)(Five).asInstanceOf[ChurchNumeral]))
+  println(toInt(Mod(Fifteen)(Five).asInstanceOf[ChurchNumeral]))
+  println(toInt(Mod(Five)(Two).asInstanceOf[ChurchNumeral]))
+  println(toInt(Mod(Five)(Three).asInstanceOf[ChurchNumeral]))
+
+
 
 }
